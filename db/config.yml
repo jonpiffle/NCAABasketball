@@ -1,0 +1,9 @@
+development:
+  adapter: postgresql
+  pool: 500
+  timeout: 50000
+  encoding: unicode
+  database: 'ncaa_basketball' 
+  host: localhost
+  username: 'piffle'
+  password: 'piffle' 
