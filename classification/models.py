@@ -172,6 +172,16 @@ class CumulativeStat(Base):
 	o_fouls_min = Column(Float)
 	o_fouls_max = Column(Float)
 	o_fouls_variance = Column(Float)
+	possesions = Column(Float)
+	offensive_efficiency = Column(Float)
+	defensive_efficiency = Column(Float)
+	effective_fg_pct = Column(Float)
+	turnover_pct = Column(Float)
+	offensive_reb_pct = Column(Float)
+	ft_rate = Column(Float)
+	adj_offensive_efficiency = Column(Float)
+	adj_defensive_efficiency = Column(Float)
+	pyth_expectation = Column(Float)
 
 	l_ranks = relationship("Rank", secondary="cumulative_stats_ranks", lazy='dynamic', backref=backref("l_cumulative_stats", lazy='dynamic'))
 	ranks = relationship("Rank", secondary="cumulative_stats_ranks", backref=backref("cumulative_stats"))
@@ -302,7 +312,17 @@ class CumulativeStat(Base):
 			self.o_fouls_mean,
 			self.o_fouls_min,
 			self.o_fouls_max,
-			self.o_fouls_variance
+			self.o_fouls_variance,
+			self.possesions,
+			self.offensive_efficiency,
+			self.defensive_efficiency,
+			self.effective_fg_pct,
+			self.turnover_pct,
+			self.offensive_reb_pct,
+			self.ft_rate,
+			#self.adj_offensive_efficiency,
+			#self.adj_defensive_efficiency,
+			#self.pyth_expectation,
 		], dtype="float")
 	
 	def selected_features(self):
