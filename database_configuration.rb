@@ -8,6 +8,6 @@ ActiveRecord::Base.establish_connection(
   :encoding => 'unicode',
   :database => 'ncaa_basketball',
   :host => 'localhost',
-  :username => 'piffle',
+  :username => 'jon',
   :password => 'piffle'
 )

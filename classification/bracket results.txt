@@ -1,0 +1,120 @@
+Naive Bayes
+2010 ESPN Score: 180
+2010 Percent Correct: 0.269841
+2011 ESPN Score: 210
+2011 Percent Correct: 0.317460
+2012 ESPN Score: 250
+2012 Percent Correct: 0.349206
+2013 ESPN Score: 380
+2013 Percent Correct: 0.349206
+2014 ESPN Score: 280
+2014 Percent Correct: 0.349206
+
+(180+210+250+380+280)/5 = 260
+(.2698 + .3175 + .3492 + .3492 + .3492)/5 = .3270
+
+Decision Tree
+2010 ESPN Score: 350
+2010 Percent Correct: 0.396825
+2011 ESPN Score: 310
+2011 Percent Correct: 0.380952
+2012 ESPN Score: 390
+2012 Percent Correct: 0.380952
+2013 ESPN Score: 260
+2013 Percent Correct: 0.333333
+2014 ESPN Score: 390
+2014 Percent Correct: 0.460317
+
+(350 + 310 + 390 + 260 + 390)/5 = 340
+(.3968 + .3810 + .3810 + .3333 + .4603)/5 = .3905
+
+Random Forest
+2010 ESPN Score: 650
+2010 Percent Correct: 0.555556
+2011 ESPN Score: 310
+2011 Percent Correct: 0.412698
+2012 ESPN Score: 330
+2012 Percent Correct: 0.412698
+2013 ESPN Score: 350
+2013 Percent Correct: 0.365079
+2014 ESPN Score: 410
+2014 Percent Correct: 0.476190
+
+(650 + 310 + 330 + 350 + 410)/5 = 410
+(.5556 + .4127 + .4127 + .3651 + .4762)/5 = .4445
+
+SVM RBF
+2010 ESPN Score: 380
+2010 Percent Correct: 0.492063
+2011 ESPN Score: 280
+2011 Percent Correct: 0.396825
+2012 ESPN Score: 310
+2012 Percent Correct: 0.380952
+2013 ESPN Score: 410
+2013 Percent Correct: 0.460317
+2014 ESPN Score: 470
+2014 Percent Correct: 0.539683
+
+(380 + 280 + 310 + 410 + 470)/5 = 370
+(.4921 + .3968 + .3810 + .4603 + .5397)/5 = .4540
+
+
+SVM Linear
+2010 ESPN Score: 580
+2010 Percent Correct: 0.539683
+2011 ESPN Score: 290
+2011 Percent Correct: 0.396825
+2012 ESPN Score: 400
+2012 Percent Correct: 0.333333
+2013 ESPN Score: 450
+2013 Percent Correct: 0.460317
+2014 ESPN Score: 560
+2014 Percent Correct: 0.539683
+
+(580 + 290 + 400 + 450 + 560)/5 = 456
+(.5397 + .3968 + .3333 + .4603 + .5397)/5 = .4540
+
+Baseline
+2010 ESPN Score: 540
+2010 Percent Correct: 0.460317
+2011 ESPN Score: 200
+2011 Percent Correct: 0.301587
+2012 ESPN Score: 180
+2012 Percent Correct: 0.269841
+2013 ESPN Score: 410
+2013 Percent Correct: 0.476190
+2014 ESPN Score: 510
+2014 Percent Correct: 0.492063
+
+(540 + 200 + 180 + 410 + 510)/5 = 368
+(.4603 + .3016 + .2698 + .4762 + .4921)/5 = .4000
+
+Regression
+2010 ESPN Score: 540
+2010 Percent Correct: 0.460317
+2011 ESPN Score: 200
+2011 Percent Correct: 0.301587
+2012 ESPN Score: 180
+2012 Percent Correct: 0.269841
+2013 ESPN Score: 410
+2013 Percent Correct: 0.476190
+2014 ESPN Score: 510
+2014 Percent Correct: 0.492063
+
+(540 + 200 + 180 + 410 + 510)/5 = 368
+(.4603 + .3016 + .2698 + .4762 + .4921)/5 = .4000
+
+Neural Net
+2010 ESPN Score: 670
+2010 Percent Correct: 0.571429
+2011 ESPN Score: 390
+2011 Percent Correct: 0.476190
+2012 ESPN Score: 440
+2012 Percent Correct: 0.444444
+2013 ESPN Score: 430
+2013 Percent Correct: 0.428571
+2014 ESPN Score: 440
+2014 Percent Correct: 0.507937
+
+(670 + 390 + 440 + 430 + 440)/5 = 474
+(.5714 + .4762 + .4444 + .4286 + .5079)/5 = .4857

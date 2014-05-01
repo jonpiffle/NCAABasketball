@@ -7,6 +7,7 @@ import code
 from sklearn import svm
 from sklearn.naive_bayes import GaussianNB
 from sklearn import tree
+import pydot
 from StringIO import StringIO
 from sklearn import preprocessing
 from sklearn import decomposition
@@ -34,29 +35,28 @@ def fit(classifier, data_partitions):
 		
 	print "Correct: %f" % float(sum(samples)/len(samples))
 
-games = Game.games_after_with_filter(35, rank_systems=("RPI", "SAG", "POM", "MOR",))
+games = Game.games_after_with_filter(19, rank_systems=("RPI", "SAG", "POM", "MOR",))
 
 print len(games)
 
-data = np.array([g.selected_features() for g in games], dtype=np.float)
+data = np.array([g.attributes() for g in games], dtype=np.float)
 labels = np.array([g.upset() for g in games])
+years = np.array([g.year for g in games], dtype=np.integer)
 
 non_nan_indices = ~np.isnan(data).any(axis=1)
 data = data[non_nan_indices]
 labels = labels[non_nan_indices]
+years = years[non_nan_indices]
 
 data = preprocessing.scale(data)
 #pca = decomposition.RandomizedPCA(whiten=True)
 #data = pca.fit_transform(data)
 
-kf = KFold(len(labels), n_folds=5, indices=True)
-data_partitions = []
-for train, test in kf:
-	train_data = [data[i] for i in train]
-	train_labels = [labels[i] for i in train]
-	test_data = [data[i] for i in test]
-	test_labels = [labels[i] for i in test]
-	data_partitions.append((train_data, train_labels, test_data, test_labels))
+
+"""
+INSERT PARTITION LOGIC HERE
+"""
+
 
 print "\nAlways Pick Favorite:"
 fit(GreedyClassifier(), data_partitions)

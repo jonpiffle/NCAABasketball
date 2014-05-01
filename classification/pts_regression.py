@@ -4,7 +4,7 @@ from sklearn.cross_validation import KFold
 import numpy as np
 import random
 import code
-from sklearn import svm, preprocessing, linear_model
+from sklearn import svm, preprocessing, linear_model, decomposition
 
 class GreedyClassifier():
 	def fit(self, train, train_labels):
@@ -24,8 +24,8 @@ def fit(classifier, data_partitions):
 		y_pred = clf.predict(data_partition[2])
 		samples.append(sum(np.fabs(y_pred-data_partition[3]))/float(len(y_pred)))
 
-		print y_pred
 		num_correct = 0
+		print len(y_pred)
 		for i in range(len(y_pred)):
 			if (y_pred[i] < 0 and data_partition[4][i]) or (y_pred[1] >= 0 and not data_partition[4][i]):
 				num_correct += 1
@@ -34,7 +34,7 @@ def fit(classifier, data_partitions):
 	print sum(samples_correct)/len(samples_correct)
 	print sum(samples)/len(samples)
 
-games = Game.games_after_with_filter(5, rank_systems=("RPI", "SAG", "POM", "MOR",))
+games = Game.games_after_with_filter(20, rank_systems=("RPI", "SAG", "POM", "MOR",))
 
 print len(games)
 
